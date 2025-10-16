@@ -1,0 +1,1 @@
+A personal portfolio showcasing technical skills, projects, and contact info, built with Next.js, TypeScript, Tailwind CSS, and animated with Framer Motion.
