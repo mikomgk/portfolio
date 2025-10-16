@@ -101,7 +101,7 @@ export default function SkillSection() {
             return acc
         }, {} as Record<string, Skill[]>)
 
-        return Object.entries(categories).filter(([_, skills]) => skills.length > 0)
+        return Object.entries(categories).filter(([, skills]) => skills.length > 0)
     }, [])
 
     return (

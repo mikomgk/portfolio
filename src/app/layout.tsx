@@ -5,7 +5,7 @@ import '../styles/globals.css'
 const inter = Inter({subsets: ['latin']})
 
 export const metadata: Metadata = {
-    title: 'Miko Stern - Senior Full Stack Developer',
+    title: 'Miko Stern',
     description: 'Senior Full Stack Developer specializing in Spring Boot, React, and modern web technologies',
     keywords: 'Full Stack Developer, Spring Boot, React, TypeScript, Java, AWS',
     authors: [{name: 'Miko Stern'}],

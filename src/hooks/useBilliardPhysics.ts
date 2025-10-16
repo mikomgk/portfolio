@@ -1,6 +1,6 @@
 'use client'
 
-import {useCallback, useRef} from 'react'
+import {useCallback, useEffect, useRef} from 'react'
 
 const BALL_SPEED = 1
 
@@ -25,6 +25,7 @@ export function useBilliardPhysics<T>() {
     const updateCallbackRef = useRef<((balls: Ball<T>[]) => void) | null>(null)
     const containerRef = useRef<HTMLElement>(null)
     const isAnimatingRef = useRef(false)
+    const animateFrameRef = useRef<() => void>(null)
 
     const initializeBalls = useCallback((ballsData: T[], container: HTMLElement, ballRadius: number = 20): Ball<T>[] | null => {
         if (!container) return null
@@ -62,7 +63,7 @@ export function useBilliardPhysics<T>() {
         return newBalls
     }, [])
 
-    const animate = useCallback(() => {
+    const animateFrame = useCallback(() => {
         if (!updateCallbackRef.current || !containerRef.current || !isAnimatingRef.current) return
 
         const width = containerRef.current.clientWidth
@@ -142,9 +143,13 @@ export function useBilliardPhysics<T>() {
 
         // Continue animation loop
         if (isAnimatingRef.current) {
-            animationRef.current = requestAnimationFrame(animate)
+            animationRef.current = requestAnimationFrame(animateFrameRef.current!)
         }
     }, [])
+
+    useEffect(() => {
+        animateFrameRef.current = animateFrame
+    }, [animateFrame])
 
     const startAnimation = useCallback((onUpdate: (balls: Ball<T>[]) => void): void => {
         updateCallbackRef.current = onUpdate
@@ -154,8 +159,8 @@ export function useBilliardPhysics<T>() {
             cancelAnimationFrame(animationRef.current)
         }
 
-        animationRef.current = requestAnimationFrame(animate)
-    }, [animate])
+        animationRef.current = requestAnimationFrame(animateFrameRef.current!)
+    }, [])
 
     const stopAnimation = useCallback((): void => {
         isAnimatingRef.current = false
