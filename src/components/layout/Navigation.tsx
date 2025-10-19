@@ -86,7 +86,7 @@ export default function Navigation({ currentSection = 'hero' }: NavigationProps)
                                     className={`group relative text-left text-lg font-medium transition-colors duration-300 hover:bg-teal-300/10 py-3 px-4 rounded-r-md ${
                                         activeSection === item.id
                                             ? 'text-teal-400 bg-teal-300/10 border-l-teal-300 border-l-3'
-                                            : 'text-gray-400 hover:text-white'
+                                            : 'text-gray-200 hover:text-white'
                                     }`}
                                 >
                                     <span className="relative z-10">{item.label}</span>
@@ -104,9 +104,9 @@ export default function Navigation({ currentSection = 'hero' }: NavigationProps)
                 whileTap={{ scale: 0.95 }}
             >
                 {isMobileMenuOpen ? (
-                    <X className="size-6 text-white"/>
+                    <X className="size-6 text-white" aria-label="Close menu"/>
                 ) : (
-                    <Menu className="size-6 text-white"/>
+                    <Menu className="size-6 text-white" aria-label="Open menu"/>
                 )}
             </motion.button>
 
