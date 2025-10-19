@@ -5,7 +5,7 @@ import {ExternalLink, Github} from 'lucide-react'
 import {portfolioData} from '@/data/portfolio'
 import Section from './Section'
 import {Project} from '@/types'
-import Tag from '@/components/Tag'
+import Tag from '@/components/ui/Tag'
 
 interface ProjectBlockProps {
     index: number,

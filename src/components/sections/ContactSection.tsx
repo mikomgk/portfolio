@@ -4,7 +4,7 @@ import {AnimatePresence, motion} from 'framer-motion'
 import {Check, Github, Linkedin, Mail} from 'lucide-react'
 import React, {useCallback, useState} from 'react'
 import Section from './Section'
-import Link from '@/components/Link'
+import Link from '@/components/ui/Link'
 
 interface SocialLink {
     name: string
