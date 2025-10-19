@@ -6,11 +6,41 @@ import {Analytics} from '@vercel/analytics/next'
 
 const inter = Inter({subsets: ['latin']})
 
+const title = 'Miko Stern - Senior Full Stack Developer'
+const description = 'Senior Full Stack Developer with 7+ years experience'
 export const metadata: Metadata = {
+    metadataBase: new URL(process.env.PUBLIC_SITE_URL || ''),
     title: 'Miko Stern',
     description: 'Senior Full Stack Developer specializing in Spring Boot, React, and modern web technologies',
     keywords: 'Full Stack Developer, Spring Boot, React, TypeScript, Java, AWS',
     authors: [{name: 'Miko Stern'}],
+    openGraph: {
+        title,
+        description,
+        url: process.env.PUBLIC_SITE_URL,
+        siteName: 'Miko Stern Portfolio',
+        locale: 'en_US',
+        type: 'website',
+        images: [
+            {
+                url: '/web-app-manifest-192x192.png',
+                width: 192,
+                height: 192,
+                alt: 'Miko Stern Portfolio',
+            },
+        ],
+    },
+    twitter: {
+        card: 'summary',
+        title,
+        description,
+        images: ['/web-app-manifest-512x512.png'],
+    },
+    robots: {
+        index: true,
+        follow: true,
+        nocache: true,
+    },
 }
 
 export const viewport: Viewport = {
