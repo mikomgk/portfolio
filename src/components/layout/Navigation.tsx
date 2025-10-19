@@ -81,6 +81,8 @@ export default function Navigation({currentSection = 'hero'}: NavigationProps) {
                             >
                                 <button
                                     onClick={() => scrollToSection(item.id)}
+                                    aria-label={`Navigate to ${item.label} section`}
+                                    aria-current={activeSection === item.id ? 'page' : undefined}
                                     className={`group relative text-left text-lg font-medium transition-colors duration-300 hover:bg-teal-300/10 py-3 px-4 rounded-r-md ${
                                         activeSection === item.id
                                             ? 'text-teal-400 bg-teal-300/10 border-l-teal-300 border-l-3'
