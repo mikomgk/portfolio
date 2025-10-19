@@ -7,7 +7,7 @@ export interface Skill {
     class?: string;
 }
 
-export interface IProject {
+export interface Project {
     title: string;
     description: string;
     technologies: string[];
@@ -15,7 +15,7 @@ export interface IProject {
     demo: string;
 }
 
-export interface IExperience {
+export interface Experience {
     company: string;
     role: string;
     period: string;
@@ -24,6 +24,6 @@ export interface IExperience {
 
 export interface PortfolioData {
     skills: Skill[];
-    projects: IProject[];
-    experience: IExperience[];
+    projects: Project[];
+    experience: Experience[];
 }

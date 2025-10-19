@@ -4,10 +4,10 @@ import {motion} from 'framer-motion'
 import {ExternalLink, Github} from 'lucide-react'
 import {portfolioData} from '@/data/portfolio'
 import Section from './Section'
-import {IProject} from '@/types'
+import {Project} from '@/types'
 import Tag from '@/components/Tag'
 
-function Project(props: { index: number, project: IProject }) {
+function ProjectBlock(props: { index: number, project: Project }) {
     return (
         <motion.div
             key={props.index}
@@ -73,7 +73,7 @@ export default function ProjectsSection() {
         <Section id="projects" title="Featured Projects">
             <div className="grid gap-8 lg:grid-cols-2">
                 {portfolioData.projects.map((project, index) => (
-                    <Project key={index} index={index} project={project}/>
+                    <ProjectBlock key={index} index={index} project={project}/>
                 ))}
             </div>
         </Section>

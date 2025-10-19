@@ -4,9 +4,9 @@ import {motion} from 'framer-motion'
 import {Calendar} from 'lucide-react'
 import {portfolioData} from '@/data/portfolio'
 import Section from './Section'
-import {IExperience} from '@/types'
+import {Experience} from '@/types'
 
-function Experience(props: { index: number, job: IExperience }) {
+function ExperienceBlock(props: { index: number, job: Experience }) {
     return <motion.div
         className="group relative rounded-xl bg-navy-900/50 p-8 backdrop-blur-sm hover:bg-navy-800/50 border-l-teal-300 border-l-3"
         initial={{opacity: 0, x: -30}}
@@ -38,8 +38,8 @@ export default function ExperienceSection() {
     return (
         <Section id="experience" title="Experience">
             <div className="space-y-12">
-                {portfolioData.experience.map((job: IExperience, index: number) => (
-                    <Experience key={index} index={index} job={job}/>
+                {portfolioData.experience.map((job: Experience, index: number) => (
+                    <ExperienceBlock key={index} index={index} job={job}/>
                 ))}
             </div>
         </Section>
