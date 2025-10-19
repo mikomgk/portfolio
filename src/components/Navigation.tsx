@@ -22,9 +22,9 @@ export default function Navigation({currentSection = 'hero'}: NavigationProps) {
             {id: 'skills', label: 'Technologies'},
             {id: 'contact', label: 'Contact'},
         ]
-        if (portfolioData.projects.length == 0)
-            delete navItems[2]
-        return navItems
+        return navItems.filter(
+            item => item.id !== 'projects' || portfolioData.projects.length > 0,
+        )
     }, [])
 
     useEffect(() => {
