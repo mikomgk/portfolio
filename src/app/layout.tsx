@@ -26,7 +26,7 @@ export const metadata: Metadata = {
         type: 'website',
         images: [
             {
-                url: '/favicon/web-app-manifest-192x192.png',
+                url: '/favicon/web-app-manifest-512x512.png',
                 width: 192,
                 height: 192,
                 alt: 'Miko Stern Portfolio',
