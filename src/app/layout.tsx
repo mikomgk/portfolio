@@ -14,6 +14,9 @@ export const metadata: Metadata = {
     description: 'Senior Full Stack Developer specializing in Spring Boot, React, and modern web technologies',
     keywords: 'Full Stack Developer, Spring Boot, React, TypeScript, Java, AWS',
     authors: [{ name: 'Miko Stern' }],
+    alternates: {
+        canonical: '/',
+    },
     openGraph: {
         title,
         description,
