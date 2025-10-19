@@ -1,10 +1,10 @@
-import type {Metadata, Viewport} from 'next'
-import {Inter} from 'next/font/google'
+import type { Metadata, Viewport } from 'next'
+import { Inter } from 'next/font/google'
 import './globals.css'
-import {SpeedInsights} from '@vercel/speed-insights/next'
-import {Analytics} from '@vercel/analytics/next'
+import { SpeedInsights } from '@vercel/speed-insights/next'
+import { Analytics } from '@vercel/analytics/next'
 
-const inter = Inter({subsets: ['latin']})
+const inter = Inter({ subsets: ['latin'] })
 
 const title = 'Miko Stern - Senior Full Stack Developer'
 const description = 'Senior Full Stack Developer with 7+ years experience'
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     title: 'Miko Stern',
     description: 'Senior Full Stack Developer specializing in Spring Boot, React, and modern web technologies',
     keywords: 'Full Stack Developer, Spring Boot, React, TypeScript, Java, AWS',
-    authors: [{name: 'Miko Stern'}],
+    authors: [{ name: 'Miko Stern' }],
     openGraph: {
         title,
         description,

@@ -1,4 +1,4 @@
-import {PortfolioData} from '@/types'
+import { PortfolioData } from '@/types'
 import {
     SiAngular,
     SiDocker,
@@ -28,34 +28,34 @@ import Jenkins from '@/assets/icons/jenkins.svg'
 
 export const portfolioData: PortfolioData = {//fixme miko change icons
     skills: [
-        {name: 'JavaScript', icon: SiJavascript, category: 'frontend'},
-        {name: 'TypeScript', icon: SiTypescript, category: 'frontend'},
-        {name: 'Angular', icon: SiAngular, category: 'frontend'},
-        {name: 'React', icon: SiReact, category: 'frontend'},
-        {name: 'Next.js', icon: SiNextdotjs, category: 'frontend'},
-        {name: 'Svelte', icon: SiSvelte, category: 'frontend'},
-        {name: 'Tailwind CSS', icon: SiTailwindcss, category: 'frontend'},
+        { name: 'JavaScript', icon: SiJavascript, category: 'frontend' },
+        { name: 'TypeScript', icon: SiTypescript, category: 'frontend' },
+        { name: 'Angular', icon: SiAngular, category: 'frontend' },
+        { name: 'React', icon: SiReact, category: 'frontend' },
+        { name: 'Next.js', icon: SiNextdotjs, category: 'frontend' },
+        { name: 'Svelte', icon: SiSvelte, category: 'frontend' },
+        { name: 'Tailwind CSS', icon: SiTailwindcss, category: 'frontend' },
 
-        {name: 'Java', icon: Java, category: 'backend'},
-        {name: 'Node.js', icon: SiNodedotjs, category: 'backend'},
-        {name: 'Spring', icon: SiSpring, category: 'backend'},
-        {name: 'Spring Boot', icon: SiSpringboot, category: 'backend'},
-        {name: 'Express', icon: SiExpress, category: 'backend'},
-        {name: 'Hibernate', icon: SiHibernate, category: 'backend'},
-        {name: 'Prisma', icon: SiPrisma, category: 'backend'},
+        { name: 'Java', icon: Java, category: 'backend' },
+        { name: 'Node.js', icon: SiNodedotjs, category: 'backend' },
+        { name: 'Spring', icon: SiSpring, category: 'backend' },
+        { name: 'Spring Boot', icon: SiSpringboot, category: 'backend' },
+        { name: 'Express', icon: SiExpress, category: 'backend' },
+        { name: 'Hibernate', icon: SiHibernate, category: 'backend' },
+        { name: 'Prisma', icon: SiPrisma, category: 'backend' },
 
-        {name: 'MSSQL', icon: Mmsql, category: 'database'},
-        {name: 'MySql', icon: SiMysql, category: 'database', class: 'opacity-50'},
-        {name: 'PostgreSQL', icon: SiPostgresql, category: 'database'},
-        {name: 'MongoDB', icon: SiMongodb, category: 'database'},
+        { name: 'MSSQL', icon: Mmsql, category: 'database' },
+        { name: 'MySql', icon: SiMysql, category: 'database', class: 'opacity-50' },
+        { name: 'PostgreSQL', icon: SiPostgresql, category: 'database' },
+        { name: 'MongoDB', icon: SiMongodb, category: 'database' },
 
-        {name: 'AWS', icon: Aws, category: 'cloud & devops'},
-        {name: 'Docker', icon: SiDocker, category: 'cloud & devops'},
-        {name: 'Jenkins', icon: Jenkins, category: 'cloud & devops'},
+        { name: 'AWS', icon: Aws, category: 'cloud & devops' },
+        { name: 'Docker', icon: SiDocker, category: 'cloud & devops' },
+        { name: 'Jenkins', icon: Jenkins, category: 'cloud & devops' },
 
-        {name: 'Git', icon: SiGit, category: 'tools'},
-        {name: 'Webpack', icon: SiWebpack, category: 'tools'},
-        {name: 'Vite', icon: SiVite, category: 'tools'},
+        { name: 'Git', icon: SiGit, category: 'tools' },
+        { name: 'Webpack', icon: SiWebpack, category: 'tools' },
+        { name: 'Vite', icon: SiVite, category: 'tools' },
     ],
 
     projects: [

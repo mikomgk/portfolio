@@ -1,6 +1,6 @@
 'use client'
 
-import {useEffect, useRef, useState} from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 interface UseIntersectionObserverOptions {
     threshold?: number
@@ -38,5 +38,5 @@ export function useIntersectionObserver(options: UseIntersectionObserverOptions 
         return () => observer.disconnect()
     }, [hasBeenInView, options.threshold, options.rootMargin])
 
-    return {elementRef, isInView, hasBeenInView}
+    return { elementRef, isInView, hasBeenInView }
 }

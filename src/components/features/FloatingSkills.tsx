@@ -1,13 +1,13 @@
 'use client'
 
-import {useCallback, useEffect, useRef, useState} from 'react'
-import {portfolioData} from '@/data/portfolio'
-import {Skill} from '@/types'
-import {Ball, useBilliardPhysics} from '@/hooks/useBilliardPhysics'
+import { useCallback, useEffect, useRef, useState } from 'react'
+import { portfolioData } from '@/data/portfolio'
+import { Skill } from '@/types'
+import { Ball, useBilliardPhysics } from '@/hooks/useBilliardPhysics'
 
 export default function FloatingSkills() {
     const [balls, setBalls] = useState<Ball<Skill>[]>([])
-    const {initializeBalls, startAnimation, stopAnimation} = useBilliardPhysics<Skill>()
+    const { initializeBalls, startAnimation, stopAnimation } = useBilliardPhysics<Skill>()
     const containerRef = useRef<HTMLDivElement>(null)
     const [isInitialized, setIsInitialized] = useState(false)
 

@@ -1,4 +1,4 @@
-import {Suspense} from 'react'
+import { Suspense } from 'react'
 import FloatingSkills from '@/components/features/FloatingSkills'
 import Navigation from '@/components/layout/Navigation'
 import HeroSection from '@/components/sections/HeroSection'

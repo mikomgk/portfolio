@@ -1,26 +1,26 @@
 'use client'
 
-import {useEffect, useMemo, useRef, useState} from 'react'
-import {AnimatePresence, motion} from 'framer-motion'
-import {Menu, X} from 'lucide-react'
-import {portfolioData} from '@/data/portfolio'
+import { useEffect, useMemo, useRef, useState } from 'react'
+import { AnimatePresence, motion } from 'framer-motion'
+import { Menu, X } from 'lucide-react'
+import { portfolioData } from '@/data/portfolio'
 
 interface NavigationProps {
     currentSection?: string
 }
 
-export default function Navigation({currentSection = 'hero'}: NavigationProps) {
+export default function Navigation({ currentSection = 'hero' }: NavigationProps) {
     const [activeSection, setActiveSection] = useState(currentSection)
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
     const observer = useRef<IntersectionObserver>(null)
 
     const navItems = useMemo(() => {
         const navItems = [
-            {id: 'hero', label: 'About'},
-            {id: 'experience', label: 'Experience'},
-            {id: 'projects', label: 'Projects'},
-            {id: 'skills', label: 'Technologies'},
-            {id: 'contact', label: 'Contact'},
+            { id: 'hero', label: 'About' },
+            { id: 'experience', label: 'Experience' },
+            { id: 'projects', label: 'Projects' },
+            { id: 'skills', label: 'Technologies' },
+            { id: 'contact', label: 'Contact' },
         ]
         return navItems.filter(
             item => item.id !== 'projects' || portfolioData.projects.length > 0,
@@ -36,7 +36,7 @@ export default function Navigation({currentSection = 'hero'}: NavigationProps) {
                     }
                 })
             },
-            { /*root: containerRef.current, */threshold: 0.3},
+            { threshold: 0.3 },
         )
         navItems.map(item => document.getElementById(item.id))
             .filter(element => {
@@ -50,7 +50,7 @@ export default function Navigation({currentSection = 'hero'}: NavigationProps) {
     const scrollToSection = (sectionId: string) => {
         const element = document.getElementById(sectionId)
         if (element) {
-            element.scrollIntoView({behavior: 'smooth', block: 'start'})
+            element.scrollIntoView({ behavior: 'smooth', block: 'start' })
         }
         setIsMobileMenuOpen(false)
     }
@@ -64,9 +64,9 @@ export default function Navigation({currentSection = 'hero'}: NavigationProps) {
                     <div className="mb-12">
                         <motion.h3
                             className="text-3xl font-bold text-teal-400"
-                            initial={{opacity: 0, x: -20}}
-                            animate={{opacity: 1, x: 0}}
-                            transition={{duration: 0.5}}
+                            initial={{ opacity: 0, x: -20 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.5 }}
                         >
                             MS
                         </motion.h3>
@@ -75,9 +75,9 @@ export default function Navigation({currentSection = 'hero'}: NavigationProps) {
                         {navItems.map((item, index) => (
                             <motion.li
                                 key={item.id}
-                                initial={{opacity: 0, x: -20}}
-                                animate={{opacity: 1, x: 0}}
-                                transition={{duration: 0.5, delay: index * 0.1}}
+                                initial={{ opacity: 0, x: -20 }}
+                                animate={{ opacity: 1, x: 0 }}
+                                transition={{ duration: 0.5, delay: index * 0.1 }}
                             >
                                 <button
                                     onClick={() => scrollToSection(item.id)}
@@ -101,7 +101,7 @@ export default function Navigation({currentSection = 'hero'}: NavigationProps) {
             <motion.button
                 className="fixed right-6 top-6 z-50 flex size-12 items-center justify-center rounded-full bg-navy-800/90 backdrop-blur-sm lg:hidden"
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                whileTap={{scale: 0.95}}
+                whileTap={{ scale: 0.95 }}
             >
                 {isMobileMenuOpen ? (
                     <X className="size-6 text-white"/>
@@ -115,25 +115,25 @@ export default function Navigation({currentSection = 'hero'}: NavigationProps) {
                 {isMobileMenuOpen && (
                     <motion.div
                         className="fixed inset-0 z-40 bg-navy-900/95 backdrop-blur-sm lg:hidden"
-                        initial={{opacity: 0}}
-                        animate={{opacity: 1}}
-                        exit={{opacity: 0}}
-                        transition={{duration: 0.2}}
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ duration: 0.2 }}
                     >
                         <div className="flex h-full items-center justify-center">
                             <motion.ul
                                 className="space-y-8 text-center"
-                                initial={{opacity: 0, y: 20}}
-                                animate={{opacity: 1, y: 0}}
-                                exit={{opacity: 0, y: 20}}
-                                transition={{duration: 0.3, delay: 0.1}}
+                                initial={{ opacity: 0, y: 20 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                exit={{ opacity: 0, y: 20 }}
+                                transition={{ duration: 0.3, delay: 0.1 }}
                             >
                                 {navItems.map((item, index) => (
                                     <motion.li
                                         key={item.id}
-                                        initial={{opacity: 0, y: 20}}
-                                        animate={{opacity: 1, y: 0}}
-                                        transition={{duration: 0.3, delay: 0.2 + index * 0.1}}
+                                        initial={{ opacity: 0, y: 20 }}
+                                        animate={{ opacity: 1, y: 0 }}
+                                        transition={{ duration: 0.3, delay: 0.2 + index * 0.1 }}
                                     >
                                         <button
                                             onClick={() => scrollToSection(item.id)}

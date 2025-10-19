@@ -7,7 +7,7 @@ interface LinkProps {
     children: React.ReactNode
 }
 
-export default function Link({href, children}: LinkProps) {
+export default function Link({ href, children }: LinkProps) {
     return (
         <a href={href} target="_blank" rel="noreferrer">
             {children}
