@@ -7,28 +7,33 @@ import Section from './Section'
 import {Project} from '@/types'
 import Tag from '@/components/Tag'
 
-function ProjectBlock(props: { index: number, project: Project }) {
+interface ProjectBlockProps {
+    index: number,
+    project: Project
+}
+
+function ProjectBlock({index, project}: ProjectBlockProps) {
     return (
         <motion.div
-            key={props.index}
+            key={index}
             className="group relative overflow-hidden rounded-2xl bg-navy-900/50 p-8 backdrop-blur-sm hover:bg-navy-800/50 hover:border-teal-300 border-1 border-transparent hover:shadow-lg shadow-teal-300/10"
             initial={{opacity: 0, y: 30}}
-            whileInView={{opacity: 1, y: 0, transition: {duration: 0.6, delay: props.index * 0.1}}}
+            whileInView={{opacity: 1, y: 0, transition: {duration: 0.6, delay: index * 0.1}}}
             viewport={{once: true}}
             whileHover={{y: -5}}
         >
             <div className="mb-6">
                 <h3 className="mb-4 text-2xl font-bold text-white group-hover:text-teal-400 transition-colors">
-                    {props.project.title}
+                    {project.title}
                 </h3>
                 <p className="leading-relaxed text-gray-300">
-                    {props.project.description}
+                    {project.description}
                 </p>
             </div>
 
             <div className="mb-6">
                 <div className="flex flex-wrap gap-2">
-                    {props.project.technologies.map((tech, techIndex) => (
+                    {project.technologies.map((tech, techIndex) => (
                         <Tag key={techIndex} tech={tech}/>
                     ))}
                 </div>
@@ -36,7 +41,7 @@ function ProjectBlock(props: { index: number, project: Project }) {
 
             <div className="flex gap-4">
                 <motion.a
-                    href={props.project.github}
+                    href={project.github}
                     className="flex items-center gap-2 text-gray-400 transition-colors hover:text-white"
                     whileHover={{scale: 1.05}}
                     whileTap={{scale: 0.95}}
@@ -46,7 +51,7 @@ function ProjectBlock(props: { index: number, project: Project }) {
                 </motion.a>
 
                 <motion.a
-                    href={props.project.demo}
+                    href={project.demo}
                     className="flex items-center gap-2 text-gray-400 transition-colors hover:text-teal-400"
                     whileHover={{scale: 1.05}}
                     whileTap={{scale: 0.95}}
