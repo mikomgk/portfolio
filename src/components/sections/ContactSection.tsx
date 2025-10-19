@@ -78,7 +78,10 @@ export default function ContactSection() {
                         target={link.onClick ? undefined : '_blank'}
                         rel={link.onClick ? undefined : 'noopener noreferrer'}
                         title={link.name}
-                        onClick={() => link.onClick?.(link)}
+                        onClick={(e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+                            e.preventDefault()
+                            link.onClick?.(link)
+                        }}
                         className={`flex size-13 items-center justify-center rounded-full bg-navy-800 text-gray-400 ${link.class}`}
                         whileHover={{scale: 1.1}}
                         whileTap={{scale: 0.95}}
