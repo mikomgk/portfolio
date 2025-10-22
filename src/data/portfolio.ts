@@ -28,14 +28,6 @@ import Jenkins from '@/assets/icons/jenkins.svg'
 
 export const portfolioData: PortfolioData = {//fixme miko change icons
     skills: [
-        { name: 'JavaScript', icon: SiJavascript, category: 'frontend' },
-        { name: 'TypeScript', icon: SiTypescript, category: 'frontend' },
-        { name: 'Angular', icon: SiAngular, category: 'frontend' },
-        { name: 'React', icon: SiReact, category: 'frontend' },
-        { name: 'Next.js', icon: SiNextdotjs, category: 'frontend' },
-        { name: 'Svelte', icon: SiSvelte, category: 'frontend' },
-        { name: 'Tailwind CSS', icon: SiTailwindcss, category: 'frontend' },
-
         { name: 'Java', icon: Java, category: 'backend' },
         { name: 'Node.js', icon: SiNodedotjs, category: 'backend' },
         { name: 'Spring', icon: SiSpring, category: 'backend' },
@@ -43,6 +35,14 @@ export const portfolioData: PortfolioData = {//fixme miko change icons
         { name: 'Express', icon: SiExpress, category: 'backend' },
         { name: 'Hibernate', icon: SiHibernate, category: 'backend' },
         { name: 'Prisma', icon: SiPrisma, category: 'backend' },
+
+        { name: 'JavaScript', icon: SiJavascript, category: 'frontend' },
+        { name: 'TypeScript', icon: SiTypescript, category: 'frontend' },
+        { name: 'Angular', icon: SiAngular, category: 'frontend' },
+        { name: 'React', icon: SiReact, category: 'frontend' },
+        { name: 'Next.js', icon: SiNextdotjs, category: 'frontend' },
+        { name: 'Svelte', icon: SiSvelte, category: 'frontend' },
+        { name: 'Tailwind CSS', icon: SiTailwindcss, category: 'frontend' },
 
         { name: 'MSSQL', icon: Mmsql, category: 'database' },
         { name: 'MySql', icon: SiMysql, category: 'database', class: 'opacity-50' },
