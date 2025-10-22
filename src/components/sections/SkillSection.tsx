@@ -38,6 +38,10 @@ function SkillIconWrapper({ skill, index, categoryIndex }: SkillIconProps) {
                 <Icon color="default" style={{ width: 40, height: 40 }}/>
             </div>
 
+            <div className="text-teal-100 px-3 py-2 text-sm whitespace-nowrap lg:hidden">
+                {skill.name}
+            </div>
+
             {isHovered && (
                 <motion.div
                     initial={{ opacity: 0, y: 10 }}
